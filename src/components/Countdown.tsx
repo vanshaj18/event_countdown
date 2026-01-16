@@ -43,7 +43,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, onComplete }) => {
   }, [targetDate, onComplete]);
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
-    <Box sx={{ m: { xs: 1, sm: 2 }, textCenter: true }}>
+    <Box sx={{ m: { xs: 1, sm: 2 }, textAlign: 'center' }}>
       <Paper 
         elevation={3} 
         sx={{ 
