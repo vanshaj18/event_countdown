@@ -12,6 +12,7 @@ A beautiful, interactive birthday countdown application built with React, TypeSc
     - **Pigeon Formation**: Particles gather to form a flying pigeon.
     - **Flight Sequence**: The pigeon flies across the screen with flapping wings.
     - **Metamorphosis**: The pigeon "burns" into a fire effect and transforms into "HAPPY BIRTHDAY".
+- **🎵 Atmospheric Music**: Automatic music playback when the celebration begins.
 - **🖼️ Background Gallery**: Smoothly transitioning background images using Framer Motion.
 - **📱 Fully Responsive**: Built with Material UI and Bootstrap 5 for a seamless experience across all devices.
 - **🌍 Localization**: Supports Unicode characters for regional languages (e.g., Odia).
@@ -57,6 +58,7 @@ export const CONSTANTS = {
   TARGET_DATE: '2026-01-16T23:59:59', // Target date and time
   PERSON_NAME: 'G U D D I',           // Name of the birthday person
   EVENT_NAME: 'ଜନ୍ମଦିନର ଶୁଭେଚ୍ଛା',      // Event message (supports Unicode)
+  MUSIC_URL: '...',                   // URL for the celebration music
   IMAGES: [                           // Gallery image URLs
     'https://images.unsplash.com/...',
     'https://images.unsplash.com/...',

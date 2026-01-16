@@ -3,7 +3,8 @@ export const CONSTANTS = {
   PERSON_NAME: 'G U D D I',
   EVENT_NAME: 'ଜନ୍ମଦିନର ଶୁଭେଚ୍ଛା', // Odia for Happy Birthday
   IMAGES: [
-    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://pbs.twimg.com/profile_images/1750161373932445696/tWFpzYnT_400x400.jpg',  
     'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   ],
+  MUSIC_URL: 'https://pixabay.com/music/special-occasions-happy-birthday-357371/'
 };
