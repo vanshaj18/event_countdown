@@ -43,12 +43,38 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, onComplete }) => {
   }, [targetDate, onComplete]);
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
-    <Box className="mx-3 text-center">
-      <Paper elevation={3} sx={{ p: 2, minWidth: '80px', backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'white' }}>
-        <Typography variant="h3" className="countdown-value">
+    <Box sx={{ m: { xs: 1, sm: 2 }, textCenter: true }}>
+      <Paper 
+        elevation={3} 
+        sx={{ 
+          p: { xs: 1.5, sm: 2 }, 
+          minWidth: { xs: '70px', sm: '100px' }, 
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+          color: 'white',
+          borderRadius: '12px',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
+        }}
+      >
+        <Typography 
+          variant="h3" 
+          className="countdown-value"
+          sx={{ 
+            fontSize: { xs: '2.2rem', sm: '4rem' },
+            fontWeight: 'bold'
+          }}
+        >
           {value.toString().padStart(2, '0')}
         </Typography>
-        <Typography variant="caption" className="countdown-label">
+        <Typography 
+          variant="caption" 
+          className="countdown-label"
+          sx={{ 
+            fontSize: { xs: '0.7rem', sm: '1rem' },
+            display: 'block',
+            mt: 0.5,
+            opacity: 0.8
+          }}
+        >
           {label}
         </Typography>
       </Paper>
@@ -56,16 +82,21 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, onComplete }) => {
   );
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-12 d-flex justify-content-center flex-wrap">
-          <TimeBox value={timeLeft.days} label="Days" />
-          <TimeBox value={timeLeft.hours} label="Hours" />
-          <TimeBox value={timeLeft.minutes} label="Minutes" />
-          <TimeBox value={timeLeft.seconds} label="Seconds" />
-        </div>
-      </div>
-    </div>
+    <Box sx={{ width: '100%', px: 2 }}>
+      <Box 
+        sx={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          flexWrap: 'wrap',
+          gap: { xs: 1, sm: 2 }
+        }}
+      >
+        <TimeBox value={timeLeft.days} label="Days" />
+        <TimeBox value={timeLeft.hours} label="Hours" />
+        <TimeBox value={timeLeft.minutes} label="Minutes" />
+        <TimeBox value={timeLeft.seconds} label="Seconds" />
+      </Box>
+    </Box>
   );
 };
 

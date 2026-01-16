@@ -7,18 +7,50 @@
   align-items: center;
   justify-content: center;
   background-color: #000;
+  touch-action: none; /* Prevent pull-to-refresh and scrolling */
+}
+
+/* Ensure no scrolling on html/body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed; /* Extra precaution for mobile browsers */
 }
 
 .content-overlay {
   z-index: 10;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
   background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
+  padding: 2rem 1rem;
   width: 90%;
-  height: 20%;
-  border-radius: 1rem;
+  max-width: 600px;
+  min-height: 250px;
+  border-radius: 1.5rem;
   backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 600px) {
+  .content-overlay {
+    padding: 1rem 0.5rem;
+    width: 95%;
+  }
+  
+  .countdown-value {
+    font-size: 2.5rem !important;
+  }
+  
+  .countdown-label {
+    font-size: 0.8rem !important;
+  }
 }
 
 .background-gallery {

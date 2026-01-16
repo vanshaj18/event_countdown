@@ -8,7 +8,7 @@ const BackgroundGallery: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 10000); // Increased interval to 8 seconds
     return () => clearInterval(interval);
   }, []);
 
